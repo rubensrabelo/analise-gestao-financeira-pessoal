@@ -3,8 +3,8 @@
 ## Backend
 ### Meta
 
-* [ ] Criar estrutura base do FastAPI
-* [ ] Configurar CORS para aceitar requisições do frontend
+* [x] Criar estrutura base do FastAPI
+* [x] Configurar CORS para aceitar requisições do frontend
 * [ ] Implementar endpoint `/upload` para receber arquivo CSV
 * [ ] Processar CSV com pandas (somar valores por categoria)
 * [ ] Retornar resultado em formato JSON
