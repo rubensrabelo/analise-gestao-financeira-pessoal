@@ -27,8 +27,6 @@
 
 ### Meta
 
-* [ ] Testar upload com diferentes formatos de CSV
-* [ ] Validar erros de leitura e tipos de dados
-* [ ] Verificar compatibilidade entre frontend e backend
+* [ ] Planejar
 
 ---
