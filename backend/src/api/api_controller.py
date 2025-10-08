@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from routes import file_router
+from .routes import file_router
 
 api_router = APIRouter()
 

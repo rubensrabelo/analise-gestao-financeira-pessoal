@@ -7,7 +7,7 @@ from api.utils import file_utils
 
 router = APIRouter()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 UPLOAD_DIR = file_utils.ensure_upload_dir_exists(BASE_DIR)
 
 

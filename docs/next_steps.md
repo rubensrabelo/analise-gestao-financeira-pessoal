@@ -5,7 +5,7 @@
 
 * [x] Configurar CORS para aceitar requisições do frontend
 * [x] Criar estrutura base do FastAPI
-* [ ] Implementar endpoint `/upload` para receber arquivo CSV - Não testei
+* [x] Implementar endpoint `/upload` para receber arquivo CSV - Não testei
 * [ ] Processar CSV com pandas (somar valores por categoria)
 * [ ] Retornar resultado em formato JSON
 
@@ -13,7 +13,7 @@
 
 ## Frontend
 
-### Meta – 10/10 a 13/10
+### Meta
 
 * [ ] Criar projeto base com React + TypeScript
 * [ ] Criar página com campo para upload de arquivo
@@ -25,7 +25,7 @@
 
 ## Testes
 
-### Meta – 14/10 a 15/10
+### Meta
 
 * [ ] Testar upload com diferentes formatos de CSV
 * [ ] Validar erros de leitura e tipos de dados
