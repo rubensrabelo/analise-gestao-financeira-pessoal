@@ -15,7 +15,7 @@
 
 ### Meta
 
-* [ ] Criar projeto base com React + TypeScript
+* [x] Criar projeto base com React + TypeScript
 * [ ] Criar página com campo para upload de arquivo
 * [ ] Enviar CSV para o backend e receber resposta JSON
 * [ ] Exibir gráfico simples (pizza ou barras) com os resultados
