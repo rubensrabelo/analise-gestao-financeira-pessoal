@@ -1,0 +1,16 @@
+.navbar {
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.navLink {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.active {
+  color: #1d4ed8;
+  border-bottom: 2px solid #1d4ed8;
+}

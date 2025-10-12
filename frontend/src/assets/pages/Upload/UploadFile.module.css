@@ -1,0 +1,33 @@
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1rem;
+  font-family: sans-serif;
+}
+
+.uploadInput {
+  padding: 8px;
+}
+
+.uploadButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.uploadButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.uploadMessage {
+  margin-top: 12px;
+  white-space: pre-line;
+  text-align: center;
+}

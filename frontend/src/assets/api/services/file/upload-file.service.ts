@@ -1,8 +1,14 @@
 import ENV from "../../../../config/env.config";
+import { parseErrorResponse } from "../../utils/parse-error.utils";
 import { UploadError } from "../errors/upload.error";
 
-// Ajeitar o padrão do error personalizado, utilizando o padrão dos meus outros projetos
-export async function uploadCsv(file: File) {
+type UploadResponse = {
+  message: string;
+  filename: string;
+  path: string;
+};
+
+export async function uploadCsv(file: File): Promise<UploadResponse> {
   const formData = new FormData();
   formData.append("file", file);
 
@@ -13,22 +19,18 @@ export async function uploadCsv(file: File) {
     });
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      const message =
-        errorData.detail ||
-        `Falha no upload do arquivo (status ${response.status}).`;
-
-      throw new UploadError(message, response.status);
+      const {message, status} = await parseErrorResponse(response);
+      throw new UploadError(message, status);
     }
 
     return await response.json();
   } catch (error: any) {
-    console.error("Erro ao enviar arquivo:", error);
+    console.error("Error sending file:", error);
 
     if (error instanceof UploadError) {
       throw error;
     }
 
-    throw new UploadError("Erro inesperado ao enviar o arquivo.", 500);
+    throw new UploadError("Unexpected error uploading file.", 500);
   }
 }
