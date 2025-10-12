@@ -8,6 +8,7 @@
 * [x] Implementar endpoint `/upload` para receber arquivo CSV - Não testei
 
 ### Meta
+* [ ] Planejar a dash - Dados de retorno
 * [ ] Processar CSV com pandas (somar valores por categoria)
 * [ ] Retornar resultado em formato JSON
 
@@ -21,15 +22,12 @@
 * [ ] Criar página com campo para upload de arquivo - Falta testar
 
 ### Meta
-* [ ] Enviar CSV para o backend e receber resposta JSON
-* [ ] Exibir gráfico simples (pizza ou barras) com os resultados
-* [ ] Melhorar layout básico e mensagens de feedback
+* [ ] Criar a tela de dashboard
 
 ---
 
 ## Testes
 ### Meta
-
 * [ ] Planejar
 
 ---

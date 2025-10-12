@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./UploadPage.module.css";
+import styles from "./UploadFile.module.css";
 import { uploadCsv } from "../../api/services/file/upload-file.service";
 
 function UploadPage() {
