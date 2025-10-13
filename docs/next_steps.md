@@ -9,7 +9,7 @@
     - [x] Saida por categoria
     - [x] Entrada e Saida por mês
 * [x] Processar CSV com pandas - Repository
-* [ ] Criar Router para cada ponto do planejamento
+* [x] Criar Router para cada ponto do planejamento
 
 ---
 

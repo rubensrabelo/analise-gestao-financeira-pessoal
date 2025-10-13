@@ -1,9 +1,12 @@
 from fastapi import APIRouter, UploadFile, HTTPException
 from starlette import status
 from pathlib import Path
+import pandas as pd
 
 from api.utils import csv_file
 from api.utils import file_utils
+from api.repositories.data_repository import set_df
+from config import CSV_PATH
 
 router = APIRouter()
 
@@ -31,6 +34,9 @@ async def upload(file: UploadFile):
         file_path = UPLOAD_DIR / fixed_filename
 
         await csv_file.save(file, file_path)
+
+        df = pd.read_csv(CSV_PATH)
+        set_df(df)
 
         return {
             "message": "File uploaded successfully.",

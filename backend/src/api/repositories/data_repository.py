@@ -1,9 +1,16 @@
 import pandas as pd
-import os
 
-from config import CSV_PATH
+df = None
 
-if not os.path.exists(CSV_PATH):
-    raise FileNotFoundError(f"CSV file not found at: {CSV_PATH}")
 
-df = pd.read_csv(CSV_PATH)
+def set_df(new_df: pd.DataFrame):
+    """Define o DataFrame global quando o CSV é carregado."""
+    global df
+    df = new_df
+
+
+def get_df() -> pd.DataFrame:
+    """Retorna o DataFrame atual. Lança erro se não estiver carregado."""
+    if df is None:
+        raise ValueError("CSV ainda não foi carregado.")
+    return df
