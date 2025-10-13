@@ -3,14 +3,13 @@
 ## Backend
 ### Meta 13/10 a 17/10
 * [x] Planejar a dash - Dados de retorno
-    - Saldo
-    - Soma Entrada
-    - Soma Saida
-    - Saida por categoria
-    - Saida por mês
-    - Gráfico de comparação entre entrada e saida mensal
-* [ ] Processar CSV com pandas (somar valores por categoria)
-* [ ] Retornar resultado em formato JSON
+    - [x] Saldo
+    - [x] Soma Entrada
+    - [x] Soma Saida
+    - [x] Saida por categoria
+    - [x] Entrada e Saida por mês
+* [x] Processar CSV com pandas - Repository
+* [ ] Criar Router para cada ponto do planejamento
 
 ---
 
