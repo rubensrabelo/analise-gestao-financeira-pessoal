@@ -27,12 +27,14 @@ async def upload(file: UploadFile):
         )
 
     try:
-        file_path = UPLOAD_DIR / file.filename
+        fixed_filename = "data.csv"
+        file_path = UPLOAD_DIR / fixed_filename
+
         await csv_file.save(file, file_path)
 
         return {
             "message": "File uploaded successfully.",
-            "filename": file.filename,
+            "filename": file_path,
             "path": str(file_path)
         }
     except Exception as e:

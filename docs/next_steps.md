@@ -1,7 +1,7 @@
 # Próximos Passos
 
 ## Backend
-### Meta
+### Meta 13/10 a 17/10
 * [x] Planejar a dash - Dados de retorno
     - Saldo
     - Soma Entrada
