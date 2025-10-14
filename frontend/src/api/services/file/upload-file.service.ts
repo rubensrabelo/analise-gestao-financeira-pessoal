@@ -1,4 +1,4 @@
-import ENV from "../../../../config/env.config";
+import ENV from "../../../config/env.config";
 import { parseErrorResponse } from "../../utils/parse-error.utils";
 import { UploadError } from "../errors/upload.error";
 

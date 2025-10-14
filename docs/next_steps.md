@@ -14,8 +14,14 @@
 ---
 
 ## Frontend
-### Meta
+### Meta 14/10 a 19/10
 * [ ] Criar a tela de dashboard
+    - [ ] Criar service
+    - [ ] Saldo
+    - [ ] Soma Entrada
+    - [ ] Soma Saida
+    - [ ] Saida por categoria
+    - [ ] Entrada e Saida por mês
 
 ---
 
