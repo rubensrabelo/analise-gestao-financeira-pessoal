@@ -31,6 +31,9 @@ def expense_by_category():
         .reset_index()
         .sort_values("valor", ascending=False)
     )
+    expenses = expenses.rename(
+        columns={"categoria": "category", "valor": "amount"}
+    )
     return expenses.to_dict(orient="records")
 
 
@@ -39,16 +42,23 @@ def income_and_expense_by_month():
     """Retorna a soma de entradas e saídas agrupada por mês."""
     df = get_df()
     df["data"] = pd.to_datetime(df["data"], errors="coerce")
-    df["mes"] = df["data"].dt.strftime("%Y-%m")
+    df["month"] = df["data"].dt.strftime("%Y-%m")
 
     summary = (
-        df.groupby(["mes", "fluxo"])["valor"]
+        df.groupby(["month", "fluxo"])["valor"]
         .sum()
         .reset_index()
-        .pivot(index="mes", columns="fluxo", values="valor")
+        .pivot(index="month", columns="fluxo", values="valor")
         .fillna(0)
         .reset_index()
-        .sort_values("mes")
+        .sort_values("month")
+    )
+
+    summary = summary.rename(
+        columns={
+            "entrada": "income",
+            "saída": "expense",
+        }
     )
 
     return summary.to_dict(orient="records")

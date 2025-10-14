@@ -14,12 +14,12 @@ export async function report<T = any>(metric: MetricType): Promise<T> {
 
         return await response.json();
     } catch (error: any) {
-        console.error(`Erro ao buscar relatório (${metric}):`, error);
+        console.error(`Error when fetching report (${metric}):`, error);
 
         if (error instanceof ReportError) {
             throw error;
         }
 
-        throw new ReportError("Erro inesperado ao buscar relatório.", 500);
+        throw new ReportError("Unexpected error fetching report.", 500);
     }
 }

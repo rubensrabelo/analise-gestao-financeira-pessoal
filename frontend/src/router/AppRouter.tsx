@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import UploadPage from "../pages/Upload/UploadFile";
 import styles from "./AppRouter.module.css";
+import ReportPage from "../pages/Report/ReportPage";
 
 function AppRouter() {
   return (
@@ -18,6 +19,7 @@ function AppRouter() {
 
       <Routes>
         <Route path="/" element={<UploadPage />} />
+        <Route path="/reports" element={<ReportPage />} />
       </Routes>
     </Router>
   );
