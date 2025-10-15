@@ -1,10 +1,12 @@
 import pandas as pd
 
-from api.schemas import FinancialData
+from api.schemas import (
+    FinancialSummary, CategoryAmount, DateIncomeAndExpenseAmount
+)
 from api.repositories.data_repository import get_df
 
 
-def get_financial_summary() -> FinancialData:
+def get_financial_summary() -> FinancialSummary:
     """Retorna um resumo financeiro com entradas, saídas e saldo."""
     df = get_df()
     total_income = df[df["fluxo"] == "entrada"]["valor"].sum()
@@ -17,7 +19,7 @@ def get_financial_summary() -> FinancialData:
     }
 
 
-def get_expense_by_category() -> list[FinancialData]:
+def get_expense_by_category() -> list[CategoryAmount]:
     """Retorna a soma de saídas agrupada por categoria."""
     df = get_df()
     expenses = (
@@ -33,7 +35,7 @@ def get_expense_by_category() -> list[FinancialData]:
     return expenses.to_dict(orient="records")
 
 
-def get_income_and_expense_by_month() -> list[FinancialData]:
+def get_income_and_expense_by_month() -> list[DateIncomeAndExpenseAmount]:
     """Retorna a soma de entradas e saídas agrupada por mês."""
     df = get_df()
     df["data"] = pd.to_datetime(df["data"], errors="coerce")
