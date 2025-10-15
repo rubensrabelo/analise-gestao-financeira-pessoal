@@ -3,14 +3,13 @@ from starlette import status
 import pandas as pd
 from pathlib import Path
 
-from api.utils import csv_file
-from api.utils import file_utils
-from api.utils import validate_csv
+from api.schemas import FileResponse
+from api.utils import csv_file, file_utils, validate_csv
 from api.repositories.data_repository import set_df
 from config import CSV_PATH
 
 
-async def upload(file: UploadFile):
+async def upload(file: UploadFile) -> FileResponse:
     """Faz o upload de um arquivo CSV e o salva na pasta `uploads/`."""
     if not file.filename or not file.filename.endswith(".csv"):
         raise HTTPException(
