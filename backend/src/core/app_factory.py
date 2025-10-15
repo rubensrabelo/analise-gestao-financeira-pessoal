@@ -28,7 +28,7 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    app.include_router(file_router, prefix="/files", tags=["Files"])
-    app.include_router(report_router, prefix="/reports", tags=["Reports"])
+    app.include_router(file_router)
+    app.include_router(report_router)
 
     return app

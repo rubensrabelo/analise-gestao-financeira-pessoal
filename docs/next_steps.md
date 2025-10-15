@@ -3,6 +3,8 @@
 ## Backend
 ### Meta - 15/10 a 20/10
 * [ ] Refatorar código
+    - [x] File
+    - [ ] Report
 * [ ] Descrever cada parte do código
 
 ---

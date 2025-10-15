@@ -1,44 +1,34 @@
 from fastapi import UploadFile, HTTPException
 from starlette import status
-from pathlib import Path
 import pandas as pd
+from pathlib import Path
 
 from api.utils import csv_file
 from api.utils import file_utils
+from api.utils import validate_csv
 from api.repositories.data_repository import set_df
 from config import CSV_PATH
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-UPLOAD_DIR = file_utils.ensure_upload_dir_exists(BASE_DIR)
 
 
 async def upload(file: UploadFile):
     """Faz o upload de um arquivo CSV e o salva na pasta `uploads/`."""
-    if file.filename is None:
+    if not file.filename or not file.filename.endswith(".csv"):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Filename is missing."
-        )
-
-    if not file.filename.endswith(".csv"):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Only .csv files are accepted."
+            detail="Invalid file. Only .csv files are accepted."
         )
 
     try:
-        fixed_filename = "data.csv"
-        file_path = UPLOAD_DIR / fixed_filename
+        upload_dir = file_utils.ensure_upload_dir_exists(Path(CSV_PATH))
+        file_path = await csv_file.save(file, upload_dir)
 
-        await csv_file.save(file, file_path)
+        df = pd.read_csv(file_path)
+        validate_csv.validate_csv(df)
 
-        df = pd.read_csv(CSV_PATH)
         set_df(df)
 
         return {
-            "message": "File uploaded successfully.",
-            "filename": file_path,
-            "path": str(file_path)
+            "message": "File uploaded successfully."
         }
     except Exception as e:
         raise HTTPException(
