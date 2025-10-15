@@ -2,9 +2,9 @@
 
 ## Backend
 ### Meta - 15/10 a 20/10
-* [ ] Refatorar código
+* [x] Refatorar código
     - [x] File
-    - [ ] Report
+    - [x] Report
 * [ ] Descrever cada parte do código
 
 ---
@@ -12,6 +12,8 @@
 ## Frontend
 ### Meta
 * [ ] Refatorar código
+    - [ ] File
+    - [ ] Report
 * [ ] Descrever cada parte do código
 
 ---
