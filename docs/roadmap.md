@@ -12,10 +12,10 @@ Desenvolver um sistema simples que permita o envio de um arquivo CSV com dados f
 
 **Tarefas:**
 
-1. [ ] Criar os diretórios principais: `backend/` e `frontend/`.
-2. [ ] Inicializar o projeto **FastAPI** no backend.
-3. [ ] Criar o projeto **React + TypeScript** no frontend (via Vite ou Create React App).
-4. [ ] Configurar o **CORS** no backend para permitir comunicação com o frontend.
+1. [x] Criar os diretórios principais: `backend/` e `frontend/`.
+2. [x] Inicializar o projeto **FastAPI** no backend.
+3. [x] Criar o projeto **React + TypeScript** no frontend (via Vite ou Create React App).
+4. [x] Configurar o **CORS** no backend para permitir comunicação com o frontend.
 
 ---
 
@@ -25,11 +25,11 @@ Desenvolver um sistema simples que permita o envio de um arquivo CSV com dados f
 
 **Tarefas:**
 
-1. [ ] Criar o endpoint `POST /upload`.
-2. [ ] Permitir o envio de arquivos CSV via `multipart/form-data`.
-3. [ ] Ler o arquivo CSV utilizando **pandas**.
-4. [ ] Agrupar os dados por categoria e calcular o total de valores.
-5. [ ] Retornar o resultado processado em formato **JSON**.
+1. [x] Criar o endpoint `POST /upload`.
+2. [x] Permitir o envio de arquivos CSV via `multipart/form-data`.
+3. [x] Ler o arquivo CSV utilizando **pandas**.
+4. [x] Agrupar os dados por categoria e calcular o total de valores.
+5. [x] Retornar o resultado processado em formato **JSON**.
 
 ---
 
@@ -39,10 +39,10 @@ Desenvolver um sistema simples que permita o envio de um arquivo CSV com dados f
 
 **Tarefas:**
 
-1. [ ] Implementar um campo de upload para o arquivo CSV.
-2. [ ] Enviar o arquivo para o backend usando **axios** ou **fetch**.
-3. [ ] Exibir o resultado retornado pelo backend.
-4. [ ] Renderizar os dados em um **gráfico de pizza ou barras** utilizando **Recharts** ou **Chart.js**.
+1. [x] Implementar um campo de upload para o arquivo CSV.
+2. [x] Enviar o arquivo para o backend usando **axios** ou **fetch**.
+3. [x] Exibir o resultado retornado pelo backend.
+4. [x] Renderizar os dados em um **gráfico de pizza ou barras** utilizando **Recharts** ou **Chart.js**.
 
 ---
 
