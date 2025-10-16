@@ -1,12 +1,7 @@
 import ENV from "../../../config/env.config";
+import type { UploadResponse } from "../../../schemas/file/upload-response.interface";
 import { parseErrorResponse } from "../../utils/parse-error.utils";
 import { UploadError } from "../errors/upload.error";
-
-type UploadResponse = {
-  message: string;
-  filename: string;
-  path: string;
-};
 
 export async function uploadCsv(file: File): Promise<UploadResponse> {
   const formData = new FormData();

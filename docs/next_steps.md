@@ -1,7 +1,7 @@
 # Próximos Passos
 
 ## Backend
-### Meta - 15/10 a 20/10
+### Meta
 * [x] Refatorar código
     - [x] File
     - [x] Report
@@ -10,7 +10,7 @@
 ---
 
 ## Frontend
-### Meta
+### Meta - 16/10 a 20/10
 * [ ] Refatorar código
     - [ ] File
     - [ ] Report

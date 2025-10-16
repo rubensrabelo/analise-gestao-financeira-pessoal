@@ -1,61 +1,9 @@
-import { useEffect, useState } from "react";
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { useReports } from "./hooks/useReports";
 import styles from "./ReportPage.module.css";
-import { report } from "../../api/services/report/reports.service";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
-
-type FinancialSummary = {
-  income: number;
-  expense: number;
-  balance: number;
-};
-
-type CategoryExpense = {
-  category: string;
-  amount: number;
-};
-
-type MonthlySummary = {
-  month: string;
-  income: number;
-  expense: number;
-};
 
 function ReportPage() {
-  const [summary, setSummary] = useState<FinancialSummary | null>(null);
-  const [categoryData, setCategoryData] = useState<CategoryExpense[]>([]);
-  const [monthlyData, setMonthlyData] = useState<MonthlySummary[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadData() {
-      try {
-        const [summaryData, categoryData, monthData] = await Promise.all([
-          report<FinancialSummary>("summary"),
-          report<CategoryExpense[]>("expense/category"),
-          report<MonthlySummary[]>("summary/month"),
-        ]);
-
-        setSummary(summaryData);
-        setCategoryData(categoryData);
-        setMonthlyData(monthData);
-      } catch (err) {
-        console.error("Error loading reports:", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadData();
-  }, []);
+  const { summary, categoryData, monthlyData, loading } = useReports();
 
   if (loading) return <p className={styles.loading}>Loading reports...</p>;
   if (!summary) return <p className={styles.error}>Error loading data.</p>;

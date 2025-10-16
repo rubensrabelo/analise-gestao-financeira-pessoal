@@ -1,7 +1,7 @@
 import ENV from "../../../config/env.config";
 import { parseErrorResponse } from "../../utils/parse-error.utils";
 import { ReportError } from "../errors/report.error";
-import type { MetricType } from "../schemas/enums/metric-type.enum";
+import type { MetricType } from "../../../schemas/enums/metric-type.enum";
 
 export async function report<T = any>(metric: MetricType): Promise<T> {
     try {

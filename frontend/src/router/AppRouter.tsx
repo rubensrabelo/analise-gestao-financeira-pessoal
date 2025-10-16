@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-import UploadPage from "../pages/Upload/UploadFile";
+import UploadPage from "../pages/File/UploadFile";
 import styles from "./AppRouter.module.css";
 import ReportPage from "../pages/Report/ReportPage";
 
