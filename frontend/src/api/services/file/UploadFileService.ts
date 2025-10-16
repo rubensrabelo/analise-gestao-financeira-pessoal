@@ -1,7 +1,7 @@
-import ENV from "../../../config/env.config";
-import type { UploadResponse } from "../../../schemas/file/upload-response.interface";
-import { parseErrorResponse } from "../../utils/parse-error.utils";
-import { UploadError } from "../errors/upload.error";
+import ENV from "../../../config/envConfig";
+import type { UploadResponse } from "../../../schemas/file/UploadResponse";
+import { parseErrorResponse } from "../../utils/parseErrorResponse";
+import { UploadError } from "../errors/UploadError";
 
 export async function uploadCsv(file: File): Promise<UploadResponse> {
   const formData = new FormData();

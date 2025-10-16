@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./UploadFile.module.css";
-import { handleFileChange } from "./helpers/handle-file-change.helper";
-import { handleUpload } from "./helpers/handle-upload.helper";
+import { handleFileChange } from "./helpers/handleFileChange";
+import { handleUpload } from "./helpers/handleUpload";
 
 function UploadPage() {
   const [file, setFile] = useState<File | null>(null);

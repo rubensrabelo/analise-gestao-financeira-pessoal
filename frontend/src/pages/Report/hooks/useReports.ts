@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import type { FinancialSummary } from "../../../schemas/reports/financial-summary.interface";
-import type { CategoryExpense } from "../../../schemas/reports/category-expenses.interface";
-import type { MonthlySummary } from "../../../schemas/reports/monthly-summary.interface";
-import { report } from "../../../api/services/report/reports.service";
+import type { FinancialSummary } from "../../../schemas/reports/FinancialSummary";
+import type { CategoryExpense } from "../../../schemas/reports/CategoryExpense";
+import type { MonthlySummary } from "../../../schemas/reports/MonthlySummary";
+import { report } from "../../../api/services/report/ReportsService";
+import { MetricEnum } from "../../../schemas/enums/MetricEnum";
 
 export function useReports() {
   const [summary, setSummary] = useState<FinancialSummary | null>(null);
@@ -14,9 +15,9 @@ export function useReports() {
     async function loadData() {
       try {
         const [summaryData, categoryData, monthData] = await Promise.all([
-          report<FinancialSummary>("summary"),
-          report<CategoryExpense[]>("expense/category"),
-          report<MonthlySummary[]>("summary/month"),
+          report<FinancialSummary>(MetricEnum.SUMMARY),
+          report<CategoryExpense[]>(MetricEnum.CATEGORY_EXPENSE),
+          report<MonthlySummary[]>(MetricEnum.SUMMARY_MONTH),
         ]);
 
         setSummary(summaryData);

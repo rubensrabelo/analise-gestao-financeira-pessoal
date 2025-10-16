@@ -1,4 +1,4 @@
-import { uploadCsv } from "../../../api/services/file/upload-file.service";
+import { uploadCsv } from "../../../api/services/file/UploadFileService";
 
 export async function handleUpload(
   file: File | null,
