@@ -10,11 +10,14 @@ import {
 } from "recharts";
 import styles from "../ReportPage.module.css";
 import type { CategoryChartProps } from "../../../schemas/reports/CategoryChartProps";
+import { ChartTypeEnum } from "../../../schemas/enums/CharTypeEnum";
 
-export function CategoryChart({ data }: CategoryChartProps) {
+export function CategoryChart({ data, type }: CategoryChartProps) {
+  const barColor = type === ChartTypeEnum.INCOME ? "#16a34a" : "#dc2626";
+
   return (
     <section className={styles.chartSection}>
-      <h3>Expenses by Category</h3>
+      <h3>{type === ChartTypeEnum.INCOME ? "Income by Category" : "Expenses by Category"}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           data={data}
@@ -26,7 +29,7 @@ export function CategoryChart({ data }: CategoryChartProps) {
           <YAxis dataKey="category" type="category" width={120} />
           <Tooltip />
           <Legend />
-          <Bar dataKey="amount" fill="#dc2626" name="Expense" />
+          <Bar dataKey="amount" fill={barColor} name={type === ChartTypeEnum.INCOME ? "Income" : "Expense"} />
         </BarChart>
       </ResponsiveContainer>
     </section>

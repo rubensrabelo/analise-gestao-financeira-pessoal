@@ -3,12 +3,12 @@ import { useReports } from "./hooks/useReports";
 import { SummaryCards } from "./components/SummaryCards";
 import { CategoryChart } from "./components/CategoryChart";
 import { MonthlyChart } from "./components/MonthlyChart";
+import { ChartTypeEnum } from "../../schemas/enums/CharTypeEnum";
 
 function ReportPage() {
-  const { summary, categoryData, monthlyData, loading } = useReports();
+  const { summary, expenseCategoryData, incomeCategoryData, monthlyData, loading } = useReports();
 
-  if (loading) return;
-  if (!summary) return <p className={styles.error}>Error loading data.</p>;
+  if (!summary) return null;
 
   return (
     <div className={styles.reportContainer}>
@@ -17,7 +17,8 @@ function ReportPage() {
       {!loading && !summary && (<p className={styles.error}>Error loading data.</p>)}
 
       <SummaryCards summary={summary} />
-      <CategoryChart data={categoryData} />
+      <CategoryChart data={expenseCategoryData} type={ChartTypeEnum.EXPENSE} />
+      <CategoryChart data={incomeCategoryData} type={ChartTypeEnum.INCOME} />
       <MonthlyChart data={monthlyData} />
     </div>
   );

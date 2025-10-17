@@ -1,4 +1,4 @@
-export interface CategoryExpense {
+export interface CategoryAmount {
   categoria: string;
   valor: number;
 }

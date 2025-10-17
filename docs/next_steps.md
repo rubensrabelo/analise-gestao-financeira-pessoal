@@ -2,13 +2,13 @@
 
 ## Backend
 ### Meta
-- [ ] Add a category pela entrada
+- [x] Add a category pela entrada
 
 ---
 
 ## Frontend
 ### Meta
-- [ ] Add o gráfico da category pela entrada
+- [x] Add o gráfico da category pela entrada
 
 ---
 
