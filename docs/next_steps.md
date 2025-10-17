@@ -2,19 +2,13 @@
 
 ## Backend
 ### Meta
-* [x] Refatorar código
-    - [x] File
-    - [x] Report
-* [ ] Descrever cada parte do código
+- [ ] Add a category pela entrada
 
 ---
 
 ## Frontend
-### Meta - 16/10 a 20/10
-* [x] Refatorar código
-    - [x] File
-    - [x] Report
-* [ ] Descrever cada parte do código
+### Meta
+- [ ] Add o gráfico da category pela entrada
 
 ---
 
