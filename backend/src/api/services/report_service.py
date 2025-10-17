@@ -35,6 +35,22 @@ def get_expense_by_category() -> list[CategoryAmount]:
     return expenses.to_dict(orient="records")
 
 
+def get_income_by_category() -> list[CategoryAmount]:
+    """Retorna a soma de entradas agrupada por categoria."""
+    df = get_df()
+    incomes = (
+        df[df["fluxo"] == "entrada"]
+        .groupby("categoria")["valor"]
+        .sum()
+        .reset_index()
+        .sort_values("valor", ascending=False)
+    )
+    incomes = incomes.rename(
+        columns={"categoria": "category", "valor": "amount"}
+    )
+    return incomes.to_dict(orient="records")
+
+
 def get_income_and_expense_by_month() -> list[DateIncomeAndExpenseAmount]:
     """Retorna a soma de entradas e saídas agrupada por mês."""
     df = get_df()

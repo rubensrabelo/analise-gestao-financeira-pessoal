@@ -20,6 +20,12 @@ def expense_by_category() -> list[CategoryAmount]:
     return report_service.get_expense_by_category()
 
 
+@router.get("/income/category", response_model=list[CategoryAmount])
+def income_by_category() -> list[CategoryAmount]:
+    """Retorna a soma de entrada agrupada por categoria."""
+    return report_service.get_income_by_category()
+
+
 @router.get("/summary/month", response_model=list[DateIncomeAndExpenseAmount])
 def income_and_expense_by_month() -> list[DateIncomeAndExpenseAmount]:
     """Retorna a soma de entradas e saídas agrupada por mês."""
