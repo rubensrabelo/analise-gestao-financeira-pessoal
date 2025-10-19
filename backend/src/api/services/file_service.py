@@ -19,13 +19,13 @@ async def upload(file: UploadFile) -> MessageResponse:
 
     try:
         upload_dir = create_folder(Path(CSV_PATH))
-        file_path = await save_file.save(file, upload_dir)
+        file_path = await save_file(file, upload_dir)
 
         df = pd.read_csv(file_path)
         validate_csv_column(df)
 
         set_df(df)
 
-        return MessageResponse("File uploaded successfully.")
+        return MessageResponse(message="File uploaded successfully.")
     except Exception as e:
         raise_database_error(e)
