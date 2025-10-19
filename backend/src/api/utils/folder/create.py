@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-def ensure_upload_dir_exists(
+def create_folder(
         base_dir: Path,
         folder_name: str = "uploads"
 ) -> Path:

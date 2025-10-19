@@ -3,7 +3,7 @@ from pathlib import Path
 import shutil
 
 
-async def save(file: UploadFile, upload_dir: Path):
+async def save_file(file: UploadFile, upload_dir: Path):
     """
     Salva um arquivo enviado (UploadFile) no caminho especificado.
     """
