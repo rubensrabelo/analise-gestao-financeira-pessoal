@@ -2,13 +2,18 @@
 
 ## Backend
 ### Meta
-- [x] Add a category pela entrada
+- [ ] Refatorar código
+    - [ ] file_service
+    - [ ] report_service
+    - [ ] utils/
 
 ---
 
 ## Frontend
 ### Meta
-- [x] Add o gráfico da category pela entrada
+- [ ] Refatorar código
+    - [ ] Melhorar a tela de upload
+    - [ ] Melhorar a tela de dashboard
 
 ---
 
