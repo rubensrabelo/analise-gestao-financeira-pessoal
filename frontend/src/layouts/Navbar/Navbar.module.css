@@ -1,0 +1,67 @@
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.brand:hover {
+  color: #1e3a8a;
+}
+
+.uploadLink {
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.15);
+  cursor: pointer;
+}
+
+/* Hover normal */
+.uploadLink:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* Estado ativo: “pressionado” */
+.active {
+  background-color: #1e3a8a;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(0); /* remove elevação */
+}
+
+/* Remove hover quando estiver ativo */
+.active:hover {
+  background-color: #1e3a8a; /* mantém cor do ativo */
+  transform: translateY(0);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}

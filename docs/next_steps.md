@@ -2,7 +2,7 @@
 
 ## Backend
 ### Meta
-- [ ] Refatorar código
+- [x] Refatorar código
     - [x] file_service
     - [x] utils/
     - [x] report_service

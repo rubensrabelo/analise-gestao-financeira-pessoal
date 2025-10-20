@@ -1,21 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import UploadPage from "../pages/File/UploadFile";
-import styles from "./AppRouter.module.css";
 import ReportPage from "../pages/Report/ReportPage";
+import Navbar from "../layouts/Navbar/Navbar";
 
 function AppRouter() {
   return (
     <Router>
-      <nav className={styles.navbar}>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-          }
-        >
-          Upload CSV
-        </NavLink>
-      </nav>
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<UploadPage />} />

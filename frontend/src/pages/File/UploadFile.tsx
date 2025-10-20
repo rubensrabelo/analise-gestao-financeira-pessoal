@@ -29,7 +29,7 @@ function UploadPage() {
         disabled={loading}
         className={styles.uploadButton}
       >
-        {loading ? "Enviando..." : "Enviar Arquivo"}
+        {loading ? "Enviando..." : "Enviar"}
       </button>
       {message && <pre className={styles.uploadMessage}>{message}</pre>}
     </div>
