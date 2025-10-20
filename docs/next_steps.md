@@ -4,8 +4,8 @@
 ### Meta
 - [ ] Refatorar código
     - [x] file_service
-    - [ ] report_service
     - [x] utils/
+    - [x] report_service
 
 ---
 

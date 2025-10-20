@@ -1,16 +1,16 @@
 import pandas as pd
 
-df = None
+_global_df = None
 
 
 def set_df(new_df: pd.DataFrame):
     """Define o DataFrame global quando o CSV é carregado."""
-    global df
-    df = new_df
+    global _global_df
+    _global_df = new_df
 
 
 def get_df() -> pd.DataFrame:
     """Retorna o DataFrame atual. Lança erro se não estiver carregado."""
-    if df is None:
+    if _global_df is None:
         raise ValueError("CSV ainda não foi carregado.")
-    return df
+    return _global_df
