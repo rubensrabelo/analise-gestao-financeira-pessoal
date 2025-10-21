@@ -1,39 +1,38 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./UploadFile.module.css";
 import { handleFileChange } from "./helpers/handleFileChange";
-import { handleUpload } from "./helpers/handleUpload";
+import { useUpload } from "./helpers/useUpload";
 
 function UploadPage() {
   const [file, setFile] = useState<File | null>(null);
   const [message, setMessage] = useState<String>("");
-  const [loading, setLoading] = useState<boolean | undefined>(false);
-  const navigate = useNavigate();
+  
+  const { handleSubmit, loading } = useUpload(file, setMessage);
 
   return (
     <div className={styles.uploadContainer}>
-      <h2>Upload de Arquivo CSV</h2>
-      <input
-        type="file"
-        accept=".csv"
-        onChange={(e) => handleFileChange(e, setFile, setMessage)}
-        className={styles.uploadInput}
-      />
-      <button
-        onClick={async () => {
-          setLoading(true);
-          const success = await handleUpload(file, setMessage);
-          if (success) setTimeout(() => navigate("/reports"), 1500);
-          setLoading(false);
-        }}
-        disabled={loading}
-        className={styles.uploadButton}
-      >
-        {loading ? "Enviando..." : "Enviar"}
-      </button>
+
+      <div className={`${styles.uploadBox} ${file ? styles.hasFile : ""}`}>
+        <h2>Upload de Arquivo CSV</h2>
+        <input
+          type="file"
+          accept=".csv"
+          onChange={(e) => handleFileChange(e, setFile, setMessage)}
+          className={styles.uploadInput}
+        />
+        <button
+          onClick={handleSubmit}
+          disabled={loading}
+          className={`${styles.uploadButton} ${file ? styles.fileSelected : ""}`}
+        >
+          {loading ? "Enviando..." : "Enviar"}
+        </button>
+      </div>
+
       {message && <pre className={styles.uploadMessage}>{message}</pre>}
     </div>
   );
 }
+
 
 export default UploadPage;

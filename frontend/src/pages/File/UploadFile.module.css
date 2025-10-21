@@ -5,7 +5,21 @@
   justify-content: center;
   height: 100vh;
   gap: 1rem;
-  font-family: sans-serif;
+}
+
+.uploadBox {
+  border: 2px solid #2563eb;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+
+.uploadBox.hasFile {
+  border-color: #16a34a;
 }
 
 .uploadInput {
@@ -21,8 +35,21 @@
   cursor: pointer;
 }
 
+.uploadButton:hover {
+  background-color: #1d4ed8;
+}
+
+.fileSelected {
+  background-color: #16a34a;
+}
+
+.fileSelected:hover {
+  background-color: #15803d; /* verde mais escuro no hover */
+}
+
 .uploadButton:disabled {
   opacity: 0.6;
+  background-color: #9ca3af;
   cursor: not-allowed;
 }
 

@@ -12,7 +12,7 @@
 ## Frontend
 ### Meta
 - [ ] Refatorar código
-    - [ ] Melhorar a tela de upload
+    - [x] Melhorar a tela de upload
     - [ ] Melhorar a tela de dashboard
 
 ---
