@@ -17,8 +17,11 @@ function ReportPage() {
       {!loading && !summary && (<p className={styles.error}>Error loading data.</p>)}
 
       <SummaryCards summary={summary} />
-      <CategoryChart data={expenseCategoryData} type={ChartTypeEnum.EXPENSE} />
-      <CategoryChart data={incomeCategoryData} type={ChartTypeEnum.INCOME} />
+
+      <div className={styles.chartRow}>
+        <CategoryChart data={expenseCategoryData} type={ChartTypeEnum.EXPENSE} />
+        <CategoryChart data={incomeCategoryData} type={ChartTypeEnum.INCOME} />
+      </div> 
       <MonthlyChart data={monthlyData} />
     </div>
   );

@@ -1,37 +1,55 @@
 .reportContainer {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 2rem;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2563eb;
 }
 
 .cardContainer {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 2rem;
+  justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .card {
   flex: 1;
-  background-color: #f9fafb;
+  min-width: 180px;
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  color: #374151;
 }
 
 .card p {
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: #111827;
 }
 
 .income {
@@ -46,12 +64,31 @@ h2 {
   border-top: 4px solid #2563eb;
 }
 
+.chartRow {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 .chartSection {
-  margin-top: 2rem;
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chartSection:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .loading,
 .error {
   text-align: center;
   margin-top: 2rem;
+  font-weight: 500;
+  color: #6b7280;
 }
