@@ -1,0 +1,6 @@
+logging:
+  strategy: file
+  level: INFO
+  file: ./log/data/app.log
+  rotation: daily
+  backup_days: 7
