@@ -12,8 +12,8 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
     - [x] log_strategies
     - [x] logger_factory
     - [x] config_log.yml
-    - [ ] logging_middleware
-    - [ ] config_log
+    - [x] logging_middleware
+    - [x] config_log
     - [ ] add log nas rotas
     - [ ] testar
 
