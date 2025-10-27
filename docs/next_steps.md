@@ -5,22 +5,21 @@
 Implementar sistema de logs, testes automatizados e containerização com Docker para aumentar a rastreabilidade, a confiabilidade e a portabilidade do backend.
 
 - [x] Criar módulo `logger.py` com configuração de logs (arquivo e console).
-- [ ] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
 - [x] Padronizar formato dos logs (`%(asctime)s - %(levelname)s - %(message)s`).
 - [x] Configurar níveis de log: `INFO`, `WARNING`, `ERROR`.
-    - [x] Estrutura do Projeto
-    - [x] log_strategies
-    - [x] logger_factory
-    - [x] config_log.yml
-    - [x] logging_middleware
-    - [x] config_log
+- [ ] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
     - [ ] add log nas rotas
+        - [x] Rota de Upload
+        - [ ] Serviço de Processamento
+        - [ ] Rota de geração de relatório
+        - [ ] Serviço de relatório
+        - [ ] Middleware
+- [ ] Garantir que os logs sejam gravados corretamente e úteis para depuração.
     - [ ] testar
 
 - [ ] Implementar testes unitários com **pytest** para funções de processamento.
 - [ ] Criar testes de integração com **httpx** para o endpoint `/upload`.
 - [ ] Gerar relatório de cobertura com `pytest --cov`.
-- [ ] Garantir que os logs sejam gravados corretamente e úteis para depuração.
 - [ ] Criar **Dockerfile** para o backend com FastAPI.
 - [ ] Criar **docker-compose.yml** para orquestrar backend, frontend e dependências.
 - [ ] Testar build e execução do container localmente.
