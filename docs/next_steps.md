@@ -8,12 +8,12 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 - [x] Padronizar formato dos logs (`%(asctime)s - %(levelname)s - %(message)s`).
 - [x] Configurar níveis de log: `INFO`, `WARNING`, `ERROR`.
 - [ ] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
-    - [ ] add log nas rotas
+    - [ ] add log nas rotas 27 a 31/10
         - [x] Rota de Upload
-        - [ ] Serviço de Processamento
-        - [ ] Rota de geração de relatório
-        - [ ] Serviço de relatório
-        - [ ] Middleware
+        - [x] Serviço de Processamento
+        - [x] Rota de geração de relatório
+        - [x] Serviço de relatório
+        - [x] Middleware
 - [ ] Garantir que os logs sejam gravados corretamente e úteis para depuração.
     - [ ] testar
 

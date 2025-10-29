@@ -18,7 +18,6 @@ logger = LoggerFactory.get_logger("AppLogger")
 
 async def upload(file: UploadFile) -> MessageResponse:
     """Faz o upload de um arquivo CSV"""
-
     logger.info(f"Recebido upload: {file.filename}")
 
     try:
@@ -38,11 +37,7 @@ async def upload(file: UploadFile) -> MessageResponse:
         logger.debug(f"Validação das colunas concluída: {df.columns.tolist()}")
 
         set_df(df)
-        logger.info(
-            f"Dados do arquivo {file.filename} carregados no repositório"
-        )
-
-        logger.info(f"Upload processado com sucesso: {file.filename}")
+        logger.info(f"Arquivo {file.filename} persistido no repositório")
 
         return MessageResponse(message="File uploaded successfully.")
     except Exception as e:
