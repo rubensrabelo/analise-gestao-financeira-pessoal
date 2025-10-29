@@ -7,19 +7,13 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 - [x] Criar módulo `logger.py` com configuração de logs (arquivo e console).
 - [x] Padronizar formato dos logs (`%(asctime)s - %(levelname)s - %(message)s`).
 - [x] Configurar níveis de log: `INFO`, `WARNING`, `ERROR`.
-- [ ] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
-    - [ ] add log nas rotas 27 a 31/10
-        - [x] Rota de Upload
-        - [x] Serviço de Processamento
-        - [x] Rota de geração de relatório
-        - [x] Serviço de relatório
-        - [x] Middleware
-- [ ] Garantir que os logs sejam gravados corretamente e úteis para depuração.
-    - [ ] testar
+- [x] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
+- [x] Garantir que os logs sejam gravados corretamente e úteis para depuração.
 
 - [ ] Implementar testes unitários com **pytest** para funções de processamento.
 - [ ] Criar testes de integração com **httpx** para o endpoint `/upload`.
 - [ ] Gerar relatório de cobertura com `pytest --cov`.
+
 - [ ] Criar **Dockerfile** para o backend com FastAPI.
 - [ ] Criar **docker-compose.yml** para orquestrar backend, frontend e dependências.
 - [ ] Testar build e execução do container localmente.
@@ -31,14 +25,17 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 ### Meta
 Adicionar logs de eventos, implementar testes automatizados e preparar ambiente Docker para facilitar o deploy e execução integrada com o backend.
 
+- Meta 30/10 a 04/11
 - [ ] Criar utilitário `logger.ts` com funções `logInfo`, `logError`, `logWarn`.
 - [ ] Adicionar logs no upload do CSV, resposta do backend e erros de rede.
 - [ ] (Opcional) Integrar com ferramenta de monitoramento (Sentry ou LogRocket).
+- [ ] Validar que logs aparecem no console de forma clara e útil.
+
 - [ ] Configurar ambiente de testes com **Jest** e **React Testing Library**.
 - [ ] Criar testes de renderização para o componente de upload.
 - [ ] Criar testes de integração simulando envio de arquivo e exibição de gráfico.
 - [ ] Verificar cobertura de testes e corrigir falhas detectadas.
-- [ ] Validar que logs aparecem no console de forma clara e útil.
+
 - [ ] Criar **Dockerfile** para o frontend (React + TypeScript).
 - [ ] Configurar o serviço do frontend no `docker-compose.yml` para comunicação com o backend.
 - [ ] Testar ambiente completo via Docker Compose (`frontend + backend`).
