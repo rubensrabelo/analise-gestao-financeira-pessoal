@@ -10,6 +10,7 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 - [x] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
 - [x] Garantir que os logs sejam gravados corretamente e úteis para depuração.
 
+### Meta 03 a 07/11
 - [ ] Implementar testes unitários com **pytest** para funções de processamento.
 - [ ] Criar testes de integração com **httpx** para o endpoint `/upload`.
 - [ ] Gerar relatório de cobertura com `pytest --cov`.
@@ -25,10 +26,10 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 ### Meta
 Adicionar logs de eventos, implementar testes automatizados e preparar ambiente Docker para facilitar o deploy e execução integrada com o backend.
 
-- Meta 30/10 a 04/11
+### Meta
 - [x] Criar utilitário `logger.ts` com funções `logInfo`, `logError`, `logWarn`.
-- [ ] Adicionar logs no upload do CSV, resposta do backend e erros de rede.
-- [ ] Validar que logs aparecem no console de forma clara e útil.
+- [x] Adicionar logs no upload do CSV, resposta do backend e erros de rede.
+- [x] Validar que logs aparecem no console de forma clara e útil.
 
 - [ ] Configurar ambiente de testes com **Jest** e **React Testing Library**.
 - [ ] Criar testes de renderização para o componente de upload.
