@@ -1,0 +1,9 @@
+{"timestamp": "2025-10-29 14:58:02", "level": "INFO", "logger": "FastAPI", "message": "POST /files/uploads - 200 - 83.75ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/summary - 200 - 47.06ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/income/category - 200 - 103.18ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/expense/category - 200 - 113.07ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/summary - 200 - 42.06ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/summary/month - 200 - 156.73ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/expense/category - 200 - 46.93ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/income/category - 200 - 72.71ms | IP: 127.0.0.1 | Query: {}"}
+{"timestamp": "2025-10-29 14:58:04", "level": "INFO", "logger": "FastAPI", "message": "GET /reports/summary/month - 200 - 44.90ms | IP: 127.0.0.1 | Query: {}"}

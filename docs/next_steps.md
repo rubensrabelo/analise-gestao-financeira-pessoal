@@ -26,9 +26,8 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 Adicionar logs de eventos, implementar testes automatizados e preparar ambiente Docker para facilitar o deploy e execução integrada com o backend.
 
 - Meta 30/10 a 04/11
-- [ ] Criar utilitário `logger.ts` com funções `logInfo`, `logError`, `logWarn`.
+- [x] Criar utilitário `logger.ts` com funções `logInfo`, `logError`, `logWarn`.
 - [ ] Adicionar logs no upload do CSV, resposta do backend e erros de rede.
-- [ ] (Opcional) Integrar com ferramenta de monitoramento (Sentry ou LogRocket).
 - [ ] Validar que logs aparecem no console de forma clara e útil.
 
 - [ ] Configurar ambiente de testes com **Jest** e **React Testing Library**.

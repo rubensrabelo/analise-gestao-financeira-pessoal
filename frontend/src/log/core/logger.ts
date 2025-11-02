@@ -1,4 +1,4 @@
-import { formatLog } from "../formatter/LoggerFormatter";
+import { formatLog } from "../formatter/loggerFormatter";
 import { LogLevelEnum } from "../schemas/enums/LogLevelEnum";
 import type { LogData } from "../schemas/interface/LogData";
 

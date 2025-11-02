@@ -1,5 +1,5 @@
 export const LogLevelEnum = {
-    INFO: "infor",
+    INFO: "info",
     WARN: "warn",
     ERROR: "error",
 } as const;
