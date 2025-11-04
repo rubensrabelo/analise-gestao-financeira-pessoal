@@ -1,16 +1,17 @@
 # Próximos Passos
 
 ## Backend
-### Meta
+### Objetivo
 Implementar sistema de logs, testes automatizados e containerização com Docker para aumentar a rastreabilidade, a confiabilidade e a portabilidade do backend.
 
+### Meta
 - [x] Criar módulo `logger.py` com configuração de logs (arquivo e console).
 - [x] Padronizar formato dos logs (`%(asctime)s - %(levelname)s - %(message)s`).
 - [x] Configurar níveis de log: `INFO`, `WARNING`, `ERROR`.
 - [x] Adicionar logs nas operações principais: upload, leitura e processamento do CSV.
 - [x] Garantir que os logs sejam gravados corretamente e úteis para depuração.
 
-### Meta 03 a 07/11 (04/11)
+### Meta
 - [x] Implementar testes unitários com **pytest** para funções de processamento.
 - [x] Criar testes de integração com **httpx** para o endpoint `/upload`.
 - [x] Gerar relatório de cobertura com `pytest --cov`.
@@ -23,7 +24,7 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 ---
 
 ## Frontend
-### Meta
+### Objetivo
 Adicionar logs de eventos, implementar testes automatizados e preparar ambiente Docker para facilitar o deploy e execução integrada com o backend.
 
 ### Meta
@@ -31,6 +32,7 @@ Adicionar logs de eventos, implementar testes automatizados e preparar ambiente 
 - [x] Adicionar logs no upload do CSV, resposta do backend e erros de rede.
 - [x] Validar que logs aparecem no console de forma clara e útil.
 
+### Meta - 05/11 a 07/11
 - [ ] Configurar ambiente de testes com **Jest** e **React Testing Library**.
 - [ ] Criar testes de renderização para o componente de upload.
 - [ ] Criar testes de integração simulando envio de arquivo e exibição de gráfico.
