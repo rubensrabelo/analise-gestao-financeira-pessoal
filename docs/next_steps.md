@@ -12,7 +12,7 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 
 ### Meta 03 a 07/11
 - [x] Implementar testes unitários com **pytest** para funções de processamento.
-- [ ] Criar testes de integração com **httpx** para o endpoint `/upload`.
+- [x] Criar testes de integração com **httpx** para o endpoint `/upload`.
 - [ ] Gerar relatório de cobertura com `pytest --cov`.
 
 - [ ] Criar **Dockerfile** para o backend com FastAPI.

@@ -1,5 +1,5 @@
-from api.routes.file_router import router as file_router
-from api.routes.report_router import router as report_router
+from api.routes.reports_router import router as file_router
+from api.routes.files_router import router as report_router
 
 __all__ = [
     "file_router",

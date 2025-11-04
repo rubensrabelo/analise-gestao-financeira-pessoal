@@ -1,4 +1,4 @@
-from fastapi import UploadFile
+from fastapi import UploadFile, HTTPException
 import pandas as pd
 from pathlib import Path
 
@@ -40,6 +40,8 @@ async def upload(file: UploadFile) -> MessageResponse:
         logger.info(f"Arquivo {file.filename} persistido no repositório")
 
         return MessageResponse(message="File uploaded successfully.")
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(
             f"Erro inesperado ao processar arquivo {file.filename}: {e}",
