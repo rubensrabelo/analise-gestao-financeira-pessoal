@@ -19,11 +19,13 @@ function UploadPage() {
           accept=".csv"
           onChange={(e) => handleFileChange(e, setFile, setMessage)}
           className={styles.uploadInput}
+          data-testid="file-input"
         />
         <button
           onClick={handleSubmit}
-          disabled={loading}
+          disabled={!file || loading}
           className={`${styles.uploadButton} ${file ? styles.fileSelected : ""}`}
+          data-testid="submit-button"
         >
           {loading ? "Enviando..." : "Enviar"}
         </button>
