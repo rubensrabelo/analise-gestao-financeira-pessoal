@@ -1,10 +1,14 @@
 import { renderHook, act } from "@testing-library/react";
 import { useUpload } from "../../pages/File/helpers/useUpload";
-import { uploadCsv } from "../../api/services/file/UploadFileService";
 import { logger } from "../../log/core/logger";
 import { useNavigate } from "react-router-dom";
+import { handleUpload } from "../../pages/File/helpers/handleUpload";
 
-jest.mock("../../api/services/file/UploadFileService");
+jest.useFakeTimers();
+
+jest.mock("../../pages/File/helpers/handleUpload", () => ({
+  handleUpload: jest.fn(() => Promise.resolve(true)),
+}));
 jest.mock("../../log/core/logger");
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
@@ -22,26 +26,31 @@ describe("useUpload", () => {
 
   test("chama upload e redireciona em sucesso", async () => {
     const file = new File(["csv,data"], "arquivo.csv", { type: "text/csv" });
+    (handleUpload as jest.Mock).mockResolvedValue(true);
 
-    // ✅ mocka uploadFile com sucesso
-    (uploadCsv as jest.Mock).mockResolvedValue({
-      success: true,
-      data: { fileUrl: "http://example.com/file.csv" }
-    });
-
-    const { result } = renderHook(() => useUpload());
+    const { result } = renderHook(() => useUpload(file, mockSetMessage));
 
     await act(async () => {
-      await result.current.handleUpload(file, mockSetMessage);
+      await result.current.handleSubmit();
     });
 
-    // ✅ verifica se upload foi chamado
-    expect(uploadCsv).toHaveBeenCalledWith(file);
+    act(() => {
+      jest.advanceTimersByTime(1500);
+    });
 
-    // ✅ agora navigate deve ter sido chamado
-    expect(mockNavigate).toHaveBeenCalledWith("/analise");
-
-    // ✅ logger deve ter logado sucesso
+    expect(handleUpload).toHaveBeenCalledWith(file, mockSetMessage);
+    expect(mockNavigate).toHaveBeenCalledWith("/reports");
     expect(logger.info).toHaveBeenCalled();
+  });
+
+  test("exibe mensagem quando nenhum arquivo é selecionado", async () => {
+    const { result } = renderHook(() => useUpload(null, mockSetMessage));
+
+    await act(async () => {
+      await result.current.handleSubmit();
+    });
+
+    expect(mockSetMessage).toHaveBeenCalledWith("Selecione um arquivo antes de enviar.");
+    expect(logger.warn).toHaveBeenCalled();
   });
 });

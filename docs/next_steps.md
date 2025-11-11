@@ -33,8 +33,8 @@ Adicionar logs de eventos, implementar testes automatizados e preparar ambiente 
 - [x] Validar que logs aparecem no console de forma clara e útil.
 
 ### Meta - 05/11 a 07/11
-- [ ] Configurar ambiente de testes com **Jest** e **React Testing Library**.
-- [ ] Criar testes de renderização para o componente de upload.
+- [x] Configurar ambiente de testes com **Jest** e **React Testing Library**.
+- [x] Criar testes de renderização para o componente de upload.
 - [ ] Criar testes de integração simulando envio de arquivo e exibição de gráfico.
 - [ ] Verificar cobertura de testes e corrigir falhas detectadas.
 '
