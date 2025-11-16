@@ -1,5 +1,5 @@
 export interface MonthlySummary {
-  mes: string;
-  entrada?: number;
-  saída?: number;
+  month: string;
+  income?: number;
+  expense?: number;
 }

@@ -35,8 +35,8 @@ Adicionar logs de eventos, implementar testes automatizados e preparar ambiente 
 ### Meta - 05/11 a 07/11
 - [x] Configurar ambiente de testes com **Jest** e **React Testing Library**.
 - [x] Criar testes de renderização para o componente de upload.
-- [ ] Criar testes de integração simulando envio de arquivo e exibição de gráfico.
-- [ ] Verificar cobertura de testes e corrigir falhas detectadas.
+- [x] Criar testes de integração simulando envio de arquivo e exibição de gráfico.
+- [x] Verificar cobertura de testes e corrigir falhas detectadas.
 '
 - [ ] Criar **Dockerfile** para o frontend (React + TypeScript).
 - [ ] Configurar o serviço do frontend no `docker-compose.yml` para comunicação com o backend.

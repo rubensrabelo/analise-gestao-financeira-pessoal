@@ -1,4 +1,4 @@
 export interface CategoryAmount {
-  categoria: string;
-  valor: number;
+  category: string;
+  amount: number;
 }
