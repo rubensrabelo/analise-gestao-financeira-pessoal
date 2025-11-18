@@ -16,10 +16,9 @@ Implementar sistema de logs, testes automatizados e containerização com Docker
 - [x] Criar testes de integração com **httpx** para o endpoint `/upload`.
 - [x] Gerar relatório de cobertura com `pytest --cov`.
 
-- [ ] Criar **Dockerfile** para o backend com FastAPI.
-- [ ] Criar **docker-compose.yml** para orquestrar backend, frontend e dependências.
-- [ ] Testar build e execução do container localmente.
-- [ ] Configurar variáveis de ambiente e volumes no `docker-compose`.
+- [x] Criar **Dockerfile** para o backend com FastAPI.
+- [x] Criar **docker-compose.yml** para orquestrar backend, frontend e dependências.
+- [x] Testar build e execução do container localmente.
 
 ---
 
